@@ -22,5 +22,10 @@
   "devDependencies": {
     "commitizen": "2.9.6",
     "semantic-release": "^6.3.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./index.js"
+    }
   }
 }

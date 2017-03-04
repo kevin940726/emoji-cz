@@ -17,4 +17,4 @@ echo '{ "path": "emoji-cz" }' > ~/.czrc
 Kai Hao <kevin830726@gmail.com>
 
 ## License
-[MIT](LICENSE.md)
+[MIT](LICENSE)
