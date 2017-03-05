@@ -1,8 +1,13 @@
 "format cjs";
 
-var engine = require('./engine');
-var types = require('./types.json');
+const engine = require('./engine');
+const types = require('./types.json');
+const getConfig = require('./getConfig');
+
+const config = getConfig();
 
 module.exports = engine({
-  types: types
+  types: config && config.types ?
+    Object.assign({}, types, config.types) :
+    types,
 });
