@@ -27,6 +27,37 @@ echo '{ "path": "emoji-cz" }' > ~/.czrc
 ## Usage
 Simply use `git cz` instead of `git commit` when committing.
 
+## Settings
+You can overwrite the `types` data in 3 different ways, it will apply the config by this order:
+
+1. `package.json`
+2. `.cz.json`
+3. `.czrc`
+
+```js
+// in package.json
+"config": {
+  "commitizen": {
+    // ...
+    "emoji-cz": {
+      "types": {
+        "Fix": {
+          "emoji": "🐝", // overwrite "Fix" emoji to a bee
+          "name": "Bug" // overwrite "Fix" name to "Bug"
+        }
+      }
+    }
+  }
+}
+
+// in .cz.json or .czrc
+{
+  "emoji-cz": {
+    //...
+  }
+}
+```
+
 ## Author
 Kai Hao <kevin830726@gmail.com>
 
