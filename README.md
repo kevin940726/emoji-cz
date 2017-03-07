@@ -14,6 +14,9 @@
   🚨  Test:      Adding missing tests or correcting existing tests
 ```
 
+## Demo
+Just check out the commit history above :point_up:
+
 ## Installation
 ```
 yarn global add emoji-cz
@@ -25,7 +28,7 @@ echo '{ "path": "emoji-cz" }' > ~/.czrc
 ```
 
 ## Usage
-Simply use `git cz` instead of `git commit` when committing.
+Simply use `git cz` instead of `git commit` when committing. See the doc of [Commitizen](https://github.com/commitizen/cz-cli) for more info.
 
 ## Settings
 You can overwrite the `types` data in 3 different ways, it will apply the config by this order:
@@ -43,7 +46,13 @@ You can overwrite the `types` data in 3 different ways, it will apply the config
       "types": {
         "Fix": {
           "emoji": "🐝", // overwrite "Fix" emoji to a bee
-          "name": "Bug" // overwrite "Fix" name to "Bug"
+          "name": "Bug", // overwrite "Fix" name to "Bug"
+          "description": "Dirty bug" // overwrite description of "Fix"
+        },
+        // add a new type "Chore"
+        "Chore": {
+          "emoji": "❓",
+          "description": "Other changes that don't modify src or test files"
         }
       }
     }
