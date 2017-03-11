@@ -31,7 +31,7 @@ echo '{ "path": "emoji-cz" }' > ~/.czrc
 Simply use `git cz` instead of `git commit` when committing. See the doc of [Commitizen](https://github.com/commitizen/cz-cli) for more info.
 
 ## Settings
-You can overwrite the `types` data in 3 different ways, it will apply the config by this order:
+You can overwrite the settings in 3 different ways, it will apply the config by this order:
 
 1. `package.json`
 2. `.cz.json`
@@ -43,6 +43,7 @@ You can overwrite the `types` data in 3 different ways, it will apply the config
   "commitizen": {
     // ...
     "emoji-cz": {
+      // Overwrite types prompted to the command line.
       "types": {
         "Fix": {
           "emoji": "🐝", // overwrite "Fix" emoji to a bee
@@ -54,7 +55,15 @@ You can overwrite the `types` data in 3 different ways, it will apply the config
           "emoji": "❓",
           "description": "Other changes that don't modify src or test files"
         }
-      }
+      },
+
+      // Overwrite the output commit subject in the specified format.
+      // Below is the default format,
+      // [emoji] will be replace with the chose type's emoji,
+      // [name] will be replace with the chose type's name,
+      // [subject] will be replace with the subject you entered.
+      // One example output of the format can be: `✨ Feat: initial commit`
+      "format": "[emoji] [name]: [subject]"
     }
   }
 }
