@@ -1,6 +1,6 @@
 {
   "name": "emoji-cz",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "A commitizen emoji adapter.",
   "preferGlobal": true,
   "main": "index.js",
