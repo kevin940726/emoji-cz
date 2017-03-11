@@ -11,4 +11,5 @@ module.exports = engine({
   types: config && config.types ?
     merge(types, config.types) :
     types,
+  format: config && config.format,
 });

@@ -17,13 +17,17 @@ var filter = function(array) {
 module.exports = function (options) {
 
   var types = options.types;
+  var format = options.format || '[emoji] [name]: [subject]';
 
   var length = longest(Object.keys(types)).length + 2;
   var choices = map(types, function (type, key) {
     var name = type.name || key;
     return {
       name: type.emoji + '  ' + rightPad(name + ':', length) + ' ' + type.description,
-      value: type.emoji + ' ' + name
+      value: {
+        emoji: type.emoji,
+        name: name,
+      }
     };
   });
 
@@ -78,7 +82,11 @@ module.exports = function (options) {
         };
 
         // Hard limit this line
-        var head = (answers.type + ': ' + answers.subject.trim()).slice(0, maxLineWidth);
+        var head = format.replace(/\[emoji\]/g, answers.type.emoji)
+          .replace(/\[name\]/g, answers.type.name)
+          .replace(/\[subject\]/g, answers.subject.trim())
+          .slice(0, maxLineWidth);
+        // var head = (answers.type + ': ' + answers.subject.trim()).slice(0, maxLineWidth);
 
         // Wrap these lines at 100 characters
         var body = wrap(answers.body, wrapOptions);
