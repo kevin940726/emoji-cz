@@ -17,13 +17,13 @@ var filter = function(array) {
 module.exports = function (options) {
 
   var types = options.types;
-  var format = options.format || '[emoji] [name]: [subject]';
+  var format = options.format || '[name]: [subject] [emoji]';
 
   var length = longest(Object.keys(types)).length + 2;
   var choices = map(types, function (type, key) {
     var name = type.name || key;
     return {
-      name: type.emoji + '  ' + rightPad(name + ':', length) + ' ' + type.description,
+      name: rightPad(name + ':', length) + ' ' + type.description + '  ' + type.emoji,
       value: {
         emoji: type.emoji,
         name: name,
