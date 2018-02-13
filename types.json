@@ -1,29 +1,29 @@
 {
-  "Feat": {
+  "feat": {
     "emoji": "✨",
     "description": "A new feature"
   },
-  "Fix": {
+  "fix": {
     "emoji": "🐛",
     "description": "A bug fix"
   },
-  "Docs": {
+  "docs": {
     "emoji": "📚",
     "description": "Documentation only changes"
   },
-  "Style": {
+  "style": {
     "emoji": "🎨",
     "description": "Changes that do not affect the meaning of the code"
   },
-  "Refactor": {
+  "refactor": {
     "emoji": "🔨",
     "description": "A code change that neither fixes a bug nor adds a feature"
   },
-  "Perf": {
+  "perf": {
     "emoji": "🚀",
     "description": "A code change that improves performance"
   },
-  "Test": {
+  "test": {
     "emoji": "🚨",
     "description": "Adding missing tests or correcting existing tests"
   }
