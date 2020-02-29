@@ -23,7 +23,7 @@ module.exports = function (options) {
   var choices = map(types, function (type, key) {
     var name = type.name || key;
     return {
-      name: type.emoji + '  ' + rightPad(name + ':', length) + ' ' + type.description,
+      name: type.emoji + '\t' + rightPad(name + ':', length) + ' ' + type.description,
       value: {
         emoji: type.emoji,
         name: name,
