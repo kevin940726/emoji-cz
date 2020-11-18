@@ -24,7 +24,7 @@
   "devDependencies": {
     "ava": "^0.18.2",
     "commitizen": "2.9.6",
-    "semantic-release": "^6.3.2"
+    "semantic-release": "^17.2.3"
   },
   "config": {
     "commitizen": {
